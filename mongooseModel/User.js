@@ -10,6 +10,10 @@ var schema = new Schema({
             type: mongoose.Schema.Types.ObjectId,
             ref: "Movie"
         }
-    ]
+    ],
+    accessLevel: {
+        type: String,
+        enum: ["Admin", "User"]
+    }
 })
 export default mongoose.model("User", schema)
