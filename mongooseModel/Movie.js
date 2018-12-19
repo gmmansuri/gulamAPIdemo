@@ -5,18 +5,18 @@ var schema = new Schema({
     rating: Number,
     director: [
         {
-            type: ObjectId,
+            type: mongoose.Schema.Types.ObjectId,
             ref: "Person"
         }
     ],
     description: String,
     genre: {
-        type: ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "Genre"
     },
     actor: [
         {
-            type: ObjectId,
+            type: mongoose.Schema.Types.ObjectId,
             ref: "Person"
         }
     ]

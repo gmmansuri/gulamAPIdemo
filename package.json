@@ -1,5 +1,5 @@
 {
-    "name": "wohlig-framework",
+    "name": "movieDemoAPI",
     "version": "1.0.0",
     "description": "Wohlig Framework",
     "main": "app.js",
@@ -12,6 +12,7 @@
         "serve": "docker run -p 3000:3000 wohlig/wohlig-framework:latest"
     },
     "dependencies": {
+        "mongoose-validators": "^0.1.0",
         "wohlig-framework-core": "^0.0.6"
     },
     "devDependencies": {
