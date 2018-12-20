@@ -1,5 +1,5 @@
 {
-    "name": "movieDemoAPI",
+    "name": "movie-demo-api",
     "version": "1.0.0",
     "description": "Wohlig Framework",
     "main": "app.js",
@@ -73,7 +73,8 @@
             "Schema": true,
             "Student": true,
             "Genre": true,
-            "GenreModel": true
+            "GenreModel": true,
+            "require": true
         }
     }
 }
