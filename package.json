@@ -72,7 +72,8 @@
             "mongoose": true,
             "Schema": true,
             "Student": true,
-            "Genre": true
+            "Genre": true,
+            "GenreModel": true
         }
     }
 }
