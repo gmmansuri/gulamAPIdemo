@@ -1,15 +1,11 @@
 const router = Router()
 router.get("/", (req, res) => {
-    var genreData = []
     Genre.find().exec(res.callback)
 })
-
-router.get("/demo", function(req, res) {
-    res.json({ demo: "this is a demo" })
-})
 router.get("/:id", (req, res) => {
-    console.log(req.params)
-    res.json({})
+    Genre.findOne({
+        _id: req.params.id
+    }).exec(res.callback)
 })
 router.post("/", (req, res) => {
     var genre = Genre({
@@ -17,6 +13,17 @@ router.post("/", (req, res) => {
     })
     genre.save(res.callback)
 })
-router.put("/:id", (req, res) => {})
-router.delete("/:id", (req, res) => {})
+router.put("/:id", (req, res) => {
+    Genre.findOne({
+        _id: req.params.id
+    }).exec((err, data) => {
+        data.name = req.body.name
+        data.save(res.callback)
+    })
+})
+router.delete("/:id", (req, res) => {
+    Genre.deleteOne({
+        _id: req.params.id
+    }).exec(res.callback)
+})
 export default router
