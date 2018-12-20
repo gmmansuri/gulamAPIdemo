@@ -4,4 +4,3 @@
  */
 
 global.validators = require("mongoose-validators")
-global.ObjectId = mongoose.Schema.Types.ObjectId
