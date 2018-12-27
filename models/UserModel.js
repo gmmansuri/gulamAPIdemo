@@ -7,6 +7,7 @@ export default {
             _id: id
         }).exec(callback)
     },
+    
     create(name,email,password,callback) {
         var user = User({
            name: name,

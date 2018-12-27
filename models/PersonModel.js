@@ -7,22 +7,24 @@ export default {
             _id: id
         }).exec(callback)
     },
-    create(name,dob,image, callback) {
-        var person = Person({
+    create(name, dob, image, callback) {
+        var obj = {
             name: name,
-            dob: dob,
-            image:image
-
-        })
+            image: image
+        }
+        if (dob) {
+            obj.dob = dob
+        }
+        var person = Person(obj)
         person.save(callback)
     },
-    edit(id, name,dob,image, callback) {
+    edit(id, name, image, dob, callback) {
         Person.findOne({
             _id: id
         }).exec((err, data) => {
             data.name = name
-            data.dob =dob
-            data.image=image
+            data.dob = dob
+            data.image = image
             data.save(callback)
         })
     },

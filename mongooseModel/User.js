@@ -1,3 +1,4 @@
+
 var schema = new Schema({
     name: String,
     email: { type: String, unqiue: true, validate: validators.isEmail() },

@@ -74,7 +74,9 @@
             "Student": true,
             "Genre": true,
             "GenreModel": true,
-            "require": true
+            "require": true,
+            "PersonModel": true,
+            "MovieModel": true
         }
     }
 }

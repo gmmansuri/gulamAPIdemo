@@ -1,6 +1,8 @@
+// import PersonModel from "../models/PersonModel";
+
 const router = Router()
 router.get("/", (req, res) => {
-    GenreModel.search(res.callback)
+    PersonModel.search(res.callback)
 })
 router.get(
     "/:id",
@@ -16,7 +18,7 @@ router.get(
         }
     }),
     (req, res) => {
-        GenreModel.getOne(req.params.id, res.callback)
+        PersonModel.getOne(req.params.id, res.callback)
     }
 )
 router.post(
@@ -31,35 +33,14 @@ router.post(
             }
         }
     }),
+
     (req, res) => {
-        GenreModel.create(req.bod, res.callback)
+        PersonModel.create(req.body.name, false, "", res.callback)
     }
 )
-router.put(
-    "/:id",
-    ValidateRequest({
-        body: {
-            type: "object",
-            properties: {
-                name: {
-                    type: "string"
-                }
-            }
-        },
-        params: {
-            type: "object",
-            properties: {
-                id: {
-                    type: "string",
-                    format: "objectId"
-                }
-            }
-        }
-    }),
-    (req, res) => {
-        GenreModel.edit(req.params.id, req.body.name, res.callback)
-    }
-)
+router.put("/:id", (req, res) => {
+    PersonModel.edit(req.params.id, req.body.name, false, "", res.callback)
+})
 router.delete(
     "/:id",
     ValidateRequest({
@@ -74,7 +55,7 @@ router.delete(
         }
     }),
     (req, res) => {
-        GenreModel.delete(req.params.id, res.callback)
+        PersonModel.delete(req.params.id, res.callback)
     }
 )
 export default router
