@@ -8,7 +8,6 @@ export default {
         }).exec(callback)
     },
     create(name, callback) {
-        console.log("time to save");
         var genre = Genre({
             name: name
         })

@@ -76,7 +76,9 @@
             "GenreModel": true,
             "require": true,
             "PersonModel": true,
-            "MovieModel": true
+            "MovieModel": true,
+            "Person": true,
+            "UserModel": true
         }
     }
 }

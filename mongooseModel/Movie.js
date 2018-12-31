@@ -3,6 +3,7 @@ var schema = new Schema({
     image: String,
     year: Number,
     rating: Number,
+    
     director: [
         {
             type: mongoose.Schema.Types.ObjectId,
@@ -20,5 +21,6 @@ var schema = new Schema({
             ref: "Person"
         }
     ]
+
 })
 export default mongoose.model("Movie", schema)

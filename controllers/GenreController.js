@@ -20,7 +20,7 @@ router.get(
     }
 )
 router.post(
-    "/",
+    "/create",
     ValidateRequest({
         body: {
             type: "object",
@@ -36,7 +36,7 @@ router.post(
     }
 )
 router.put(
-    "/:id",
+    "edit/:id",
     ValidateRequest({
         body: {
             type: "object",
@@ -61,7 +61,7 @@ router.put(
     }
 )
 router.delete(
-    "/:id",
+    "delete/:id",
     ValidateRequest({
         params: {
             type: "object",

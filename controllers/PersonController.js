@@ -39,7 +39,7 @@ router.post(
     }
 )
 router.put("/:id", (req, res) => {
-    PersonModel.edit(req.params.id, req.body.name, false, "", res.callback)
+    PersonModel.edit(req.params.id, req.body.name, "", "", res.callback)
 })
 router.delete(
     "/:id",

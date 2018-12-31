@@ -1,4 +1,3 @@
-
 var schema = new Schema({
     name: String,
     email: { type: String, unqiue: true, validate: validators.isEmail() },
@@ -8,7 +7,7 @@ var schema = new Schema({
     accessToken: { type: String },
     favourites: [
         {
-            type: mongoose.Schema.Types.ObjectId,
+            type:mongoose.Schema.Types.ObjectId,
             ref: "Movie"
         }
     ],
